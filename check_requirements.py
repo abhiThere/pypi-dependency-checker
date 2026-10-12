@@ -65,8 +65,8 @@ def check_requirements(filename="requirements.txt"):
             )
 
     print(f"Dependencies checked: {checked}")
-    print(f"Packages not on PyPI: {missing_packages}")
-    print(f"Versions not on PyPI: {missing_versions}")
+    print(f"Packages not on PyPI: {len(missing_packages)}")
+    print(f"Versions not on PyPI: {len(missing_versions)}")
 
     if valid_releases:
         oldest = min(valid_releases, key=lambda release: release[0])
